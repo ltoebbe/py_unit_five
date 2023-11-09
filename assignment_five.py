@@ -32,21 +32,23 @@ def main():
     counter = 0
     while True:
         guess = user_guess()
+        absolute_value = abs(int(guess)) - random_number
         counter = counter + 1
         if int(guess) == random_number:
             print("you got it!")
             break
-        elif 1 < (abs(int(guess)) - random_number) <= 5:
+        elif 1 < absolute_value <= 5:
             print("your blood is boiling and your hair is on fire")
-        elif 5 < (abs(int(guess)) - random_number) <= 25:
+        elif 5 < absolute_value <= 25:
             print("you have a pretty bad sunburn")
-        elif 25 < (abs(int(guess)) - random_number) <= 50:
+        elif 25 < absolute_value <= 50:
             print("you are the exact average temperature of a healthy human at rest")
-        elif 50 < (abs(int(guess)) - random_number) <= 75:
+        elif 50 < absolute_value <= 75:
             print("your teeth are chattering and you can't feel your toes")
-        elif 75 < (abs(int(guess)) - random_number) <= 100:
+        elif 75 < absolute_value <= 100:
             print("you have stage 3 hypothermia")
     print("it took you", counter, "tries to guess the number.")
 
 
 main()
+# cant sandwich <s
